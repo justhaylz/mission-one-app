@@ -1,60 +1,99 @@
-# Mission Ready HQ - Mission ONE
-
-## Task 1: Identify Stakeholders
-
-Customers: Primary users to obtain insurance quotes.​
-
-Turners: Oversee the apps development, maintenance and integration with existing systems. ​
-
-Developers and Designers: responsible for creating the app and making sure it is a user-friendly interface and efficient functionality.​
-
-Data Providers: to determine vehicle values the app would need access to reliable automative database.​
-
-Regulatory Authorities: compliance with insurance regulations is essential and would need to review and approve the apps features and data handling practices.​
-
-Marketing and Sales Teams: These teams would promote the app to potential users and ensure adoption. Their feedback during development would be valuable.​
-
-
-## Task 2: Understand Context of a Project
-
-Project Goals and Scope: Understand the project’s purpose, objectives, and desired outcomes. Define clear boundaries for what’s in scope and what’s not.​
-
-Stakeholders and Roles: Identify key stakeholders, their roles, and expectations. Effective communication with team members, clients, and users is essential.​
-
-Constraints and Resources: Be aware of time, budget, and resource limitations. Consider technical constraints, existing systems, and available tools.​
-
-Risk Assessment: Evaluate potential risks (technical, organizational, or external) and create mitigation strategies. Anticipate challenges and plan accordingly.​
-
-Requirements Gathering: Gather detailed requirements from stakeholders. Understand user needs, functional specifications, and any non-functional requirements.​
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
 
-## Task 3: Familiarise with tool for Task Management
 
-Jira board during project:
+<!-- ABOUT THE PROJECT -->
+### About The Project
 
-<img width="573" alt="image" src="https://github.com/justhaylz/mission-one-app/assets/158859106/0477bf5e-4040-4578-afb3-9330de8f298e">
+## The Client
+Turners Car Auctions is a market leader in the automotive industry in New Zealand, responsible for more than 10% of all used vehicle sales in the country. It has retained its original function as a vehicle auctioneer, operating in 19 branches nationwide, but has become increasingly dependent on a parallel role as a conventional used vehicle dealership. In support of that role, it has established in-house finance and vehicle insurance divisions that allow it to offer buyers a complete “one-stop shop” experience.
 
 
-Jira board at the end of project:
+## The Project Brief
+Turners is currently undertaking a major re-design of its motor vehicle insurance systems and processes, including an investigation of ways in which the introduction of new technologies can enhance the buyer experience. Here is some information about motor vehicle insurance at Turners [https://www.turners.co.nz/Cars/finance-insurance/car-insurance/].  You have just been assigned to the project team to help create a new insurance buying experience.
 
-<img width="564" alt="image" src="https://github.com/justhaylz/mission-one-app/assets/158859106/928feee5-0857-492e-9c0f-900985e7e2ea">
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Task 4: Prototype to Showcase AI Solution
 
-For the prototype I trained a model in Azure Custom Vision to identify the type of car.
 
-Four categories of vehicles in the Custom Vision.
-- Sedan
-- Hatchback
-- SUV
-- Ute
+### Built With
 
-Here the Custom Vision AI is accessed via the API in a React Vite project. 
+* [![React][React.js]][React-url]
 
-## Task 5: Prensentation 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Loom Recording Presentation submitted with word document M1.docx and github link.
 
-## Task 6: Submit the project
 
-Submitted on 28/06/2024 =]
+<!-- GETTING STARTED -->
+## Getting Started
+
+- create you vite react.js app = create vite@latest
+- Build your folder structure
+- Add components: CustomVision.jsx and CustomVision.css
+- Add env file for api and key information
+- Add the required vehicle images to custom vision to predict what the image a user has uploaded
+
+### Prerequisites
+
+-React
+-Vite
+-JavaScript
+
+### Installation
+
+1. Clone the repo:  git clone https://github.com/justhaylz/mission-one-app.git
+   
+3. Install NPM packages
+   -npm install
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### CustomVision
+
+Fetches from custom vision and predicts what type of vehicle is uploaded.
+
+### App
+
+Runs the useState hooks that renders the data retrieved from custom vision and displays on screen.
+
+## Data Display Example:
+
+![Screenshot 2024-06-28 175311](https://github.com/justhaylz/mission-one-app/assets/158859106/6e186fce-d889-4952-9a13-5ea797ab4f80)
+
+<!-- CONTACT -->
+## Contact
+
+Hayley Smith
+
+GitHub Link: https://github.com/justhaylz/mission-one-app
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
