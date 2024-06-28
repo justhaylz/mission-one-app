@@ -68,11 +68,11 @@ Turners is currently undertaking a major re-design of its motor vehicle insuranc
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### CustomVision
+### CustomVision.jsx
 
 Fetches from custom vision and predicts what type of vehicle is uploaded.
 
-### App
+### App.jsx
 
 Runs the useState hooks that renders the data retrieved from custom vision and displays on screen.
 
@@ -95,5 +95,3 @@ GitHub Link: https://github.com/justhaylz/mission-one-app
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
