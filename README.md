@@ -1,4 +1,4 @@
-# Mission Ready HQ - Mission 1
+# Mission Ready HQ - Mission ONE
 
 ## Task 1: Identify Stakeholders
 
