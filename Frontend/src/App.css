@@ -1,0 +1,24 @@
+* {
+    background-color: black;
+    justify-content: center;
+}
+
+/* .container {
+    display: flex;
+} */
+
+.prototype {
+    color: rgb(77, 233, 233);
+}
+
+.upload {
+    color: rgb(77, 233, 233);
+}
+
+.button {
+    color: rgb(77, 233, 233);
+}
+
+.image {
+    width: 10%;
+}
