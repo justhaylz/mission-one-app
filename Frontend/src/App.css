@@ -1,11 +1,10 @@
 * {
+    display: block;
+    text-align: center;
     background-color: black;
-    justify-content: center;
+    margin-top: 0;
+    
 }
-
-/* .container {
-    display: flex;
-} */
 
 .prototype {
     color: rgb(77, 233, 233);
@@ -17,8 +16,15 @@
 
 .button {
     color: rgb(77, 233, 233);
+    margin-left: 575px;
+}
+
+.input {
+    margin-left: 500px;
+    background-color: white;
 }
 
 .image {
-    width: 10%;
+    width: 20%;
+    margin-left: 500px;
 }
