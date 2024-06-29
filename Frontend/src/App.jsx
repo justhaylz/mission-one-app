@@ -1,14 +1,14 @@
 import { useState } from "react";
 import CustomVision from "./components/CustomVision";
 import './App.css';
-
+ 
 // This is the main functional component for our application
 function App() {
   // This state variable holds the selected image file object
   const [file, setFile] = useState(null);
   // This state variable holds a URL to the selected image for display
   const [image, setImage] = useState(null);
-
+ 
   // This function handles the change event for the file input
   const handleChange = (e) => {
     // Check if a file was selected
@@ -22,14 +22,14 @@ function App() {
       setFile(URL.createObjectURL(selectedFile));
     }
   };
-
+ 
   // This function handles clearing the selected image and URL
   const handleClear = () => {
     // Reset both image and file state variables to null
     setImage(null);
     setFile(null);
   };
-
+ 
   return (
     <div className="container">
       <h1 className="prototype">Turners Car Type Recognition</h1>
@@ -38,11 +38,12 @@ function App() {
       {/* Conditionally render the image element based on the image state */}
       {image && <img className="image" src={file} alt="Selected Image" />}
       {/* Pass the selected image to the CustomVision component */}
+      <br />
       {image && <CustomVision image={image} />}
-      <input className="input" type="file" onChange={handleChange} />
+      <input className="input" type="file" onChange={handleChange} onClick={handleClear} />
       <button className="button" onClick={handleClear}>Clear Image</button>
     </div>
   );
 }
-
+ 
 export default App;

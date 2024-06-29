@@ -1,6 +1,7 @@
 * {
     display: block;
     text-align: center;
+    align-items: center;
     background-color: black;
     margin-top: 0;
     
@@ -27,4 +28,37 @@
 .image {
     width: 20%;
     margin-left: 500px;
+}
+
+/* Media enquiry*/
+
+@media (max-width: 500px) {
+
+    .input {
+        margin-left: 100px;
+        
+    }
+
+    .button {
+        margin-left: 180px;
+    }
+
+    .image {
+        margin-left: 180px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 800px) {
+    .input {
+        margin-left: 250px;
+        
+    }
+
+    .button {
+        margin-left: 340px;
+    }
+
+    .image {
+        margin-left: 310px;
+    }
 }
