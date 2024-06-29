@@ -76,9 +76,10 @@ Fetches from custom vision and predicts what type of vehicle is uploaded.
 
 Runs the useState hooks that renders the data retrieved from custom vision and displays on screen.
 
-## No Data Display Example:
+## Display Example:
 
-![Screenshot 2024-06-28 175311](https://github.com/justhaylz/mission-one-app/assets/158859106/6e186fce-d889-4952-9a13-5ea797ab4f80)
+<img width="404" alt="image" src="https://github.com/justhaylz/mission-one-app/assets/158859106/ad496489-f26f-4686-ac27-5ffa6e1d2f14">
+
 
 <!-- CONTACT -->
 ## Contact
