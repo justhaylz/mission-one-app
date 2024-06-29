@@ -1,48 +1,49 @@
 import useSWR from 'swr';
 import '../components/CustomVision.css';
-
+ 
 // Define the minimum confidence threshold for a prediction to be considered valid
 const PREDICTION_THRESHOLD = 0.45;
-
+ 
 // This functional component handles processing an image using the Custom Vision service
-const CustomVision = (image) => {
+// eslint-disable-next-line react/prop-types
+const CustomVision = ({ image }) => {
   // Define the URL of the Custom Vision prediction endpoint (likely retrieved from environment variables)
   const customVisionURL = import.meta.env.VITE_API_ENDPOINT;
-
+ 
   // Use the `useSWR` hook to fetch data from the Custom Vision endpoint
   // The fetcher function is responsible for making the API call
   const { data, error, isLoading, isValidating } = useSWR(customVisionURL, fetcher);
-
+ 
   // This function defines how to fetch data from the Custom Vision endpoint
   async function fetcher(url) {
-    // Make a POST request to the provided URL
+    // Making a POST request to the custom vision API
     const response = await fetch(url, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        // Set the required headers for authentication and content type
-        'Prediction-Key': import.meta.env.VITE_PRODUCTION_KEY,
-        'Content-Type': 'application/octet-stream',
+        // Using Prediction-Key from environment variables for authentication
+        "Prediction-Key": import.meta.env.VITE_PRODUCTION_KEY,
+        // Setting the content type as octet-stream for the image data
+        "Content-Type": "application/octet-stream",
       },
-      // Send the image data as the request body
-      body: image,
+      body: image // Sending the image as the request body
     });
-
-    // Parse the JSON response from the API
-    const result = await response.json();
-
-    // Extract the prediction data from the response (specific logic may vary)
-    const prediction = result[4]?.[1]?.[0];
-
-    // Check if a prediction is available and has sufficient confidence
-    if (prediction && prediction.probability > PREDICTION_THRESHOLD) {
-      // Return a formatted string with the predicted vehicle type (uppercase)
-      return `Vehicle type: ${prediction.tagName.toUpperCase()}`;
+    console.log(image);
+    // Parsing the JSON response from the API
+    const data = await response.json();
+    console.log(data);
+    // Extracting the probability and vehicle type from the response
+    const probability = Object.entries(data)[4][1][0].probability;
+    const vehicle = Object.entries(data)[4][1][0].tagName.toUpperCase();
+    // Checking if the probability is greater than a threshold to ensure accuracy
+    if (probability > PREDICTION_THRESHOLD) {
+      // Returning the vehicle type if the probability is high enough
+      return "Vehicle type is: " + vehicle;
     } else {
-      // Return a message indicating the vehicle could not be identified
-      return 'Unable to identify the type of vehicle. Please try a different image.';
+      // Returning an error message if the vehicle type cannot be reliably determined
+      return "Unable to detect the type of vehicle. Please try a different image.";
     }
   }
-
+ 
   // Render the component content based on the data fetching state
   return (
     <div className='customVision'>
@@ -58,5 +59,5 @@ const CustomVision = (image) => {
     </div>
   );
 };
-
+ 
 export default CustomVision;
